@@ -29,16 +29,16 @@
 ```
 pip install -r requirements.txt
 ```
-3. Выполним миграции в бд:
+2. Выполним миграции в бд:
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
-4. Запустим тестирование:
+3. Запустим тестирование:
 ```
 python manage.py test
 ```
-5. После успешного завершения тестирования запускаем сервис:
+4. После успешного завершения тестирования запускаем сервис:
 ```
 python manage.py runserver
 ```
