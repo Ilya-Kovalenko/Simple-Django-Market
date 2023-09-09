@@ -22,6 +22,8 @@
   
 Методы принимают JSON на входе и отдают JSON на выходе
 
+---
+
 ## Настройка проекта
 1. Выполним установку зависимостей:
 ```
@@ -40,3 +42,6 @@ python manage.py test
 ```
 python manage.py runserver
 ```
+---
+## Диаграмма БД
+![Диаграмма БД](https://github.com/Ilya-Kovalenko/Simple-Django-Market/assets/98124003/90d60915-94ba-42d5-a2e5-007739ec3365)
