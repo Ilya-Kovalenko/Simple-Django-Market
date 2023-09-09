@@ -4,7 +4,11 @@ from django.shortcuts import get_object_or_404
 
 class CartService:
     @staticmethod
-    def update_cart(product_id: int, cart_id: int, count: int):
+    def create_cart(id: int) -> None:
+        Cart.objects.create(id=id)
+
+    @staticmethod
+    def update_cart(product_id: int, cart_id: int, count: int) -> None:
         cart = Cart.objects.get(id=cart_id)
         product = get_object_or_404(Product, id=product_id)
 

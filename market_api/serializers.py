@@ -1,10 +1,16 @@
+from abc import ABC
+
 from rest_framework import serializers
-from market_api.models import Product, CartList
+from market_api.models import Product, CartList, Cart
 
 
 def greater_then_zero_validator(value):
     if value <= 0:
         raise serializers.ValidationError("Price must be greater than zero")
+
+
+class CartIdSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
 
 
 class ProductSerializer(serializers.ModelSerializer):
