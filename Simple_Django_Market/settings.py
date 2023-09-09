@@ -79,7 +79,7 @@ LOGGING = {
 
     'loggers': {
         'market_api_logger': {
-            'handlers': ['file'],
+            'handlers': ['file', 'console'],
             'level': 'DEBUG',
             'propagate': True
         },
