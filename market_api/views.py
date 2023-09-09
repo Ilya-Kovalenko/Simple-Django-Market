@@ -92,7 +92,7 @@ class CartCreateView(APIView):
 
         try:
             CartService.create_cart(id=serializer.data['id'])
-            print(type(Response(status=status.HTTP_200_OK)))
+            logger.info("Created cart with id {}".format(serializer.data["id"]))
             return Response(status=status.HTTP_200_OK)
 
         except Exception as E:
