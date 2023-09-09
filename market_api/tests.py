@@ -30,6 +30,12 @@ class TestProduct(APITestCase):
 
 
 class TestCart(APITestCase):
+    def create_cart(self):
+        response = self.client.post('/create_cart', {"id": 12})
+        carts = Cart.objects.all()
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(carts[0]['id'], 12)
 
     def test_cart_post(self):
         Product.objects.create(name='test_name', manufacturer='test_manufacturer', price=100.0)
